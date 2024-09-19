@@ -30,17 +30,17 @@ if ($wiek > 1) {
 }
 echo '</span>';
 if ($wiek == 1) {
-    echo ' <br><h2 class="blue-text">Jeszcze nie możesz głosować</h2>';
+    echo '<h2 class="blue-text">Jeszcze nie możesz głosować</h2>';
 } else if ($wiek > 1 && $wiek < 18) {
-    echo '<br><h2 class="blue-text">Jeszcze nie możesz głosować</h2>';
+    echo '<h2 class="blue-text">Jeszcze nie możesz głosować</h2>';
 } else if ($wiek >= 18 && $wiek < 21) {
-    echo '<br><h2 class="blue-text">Możesz tylko głosować</h2>';
+    echo '<h2 class="blue-text">Możesz tylko głosować</h2>';
 } else if ($wiek >= 21 && $wiek < 30) {
-    echo '<br><h2 class="blue-text">Możesz głosować i kandydować do Sejmu</h2>';
+    echo '<h2 class="blue-text">Możesz głosować i kandydować do Sejmu</h2>';
 } else if ($wiek >= 30 && $wiek < 35) {
-    echo '<br><h2 class="blue-text">Możesz głosować i kandydować do Sejmu i Senatu</h2>';
+    echo '<h2 class="blue-text">Możesz głosować i kandydować do Sejmu i Senatu</h2>';
 } else if ($wiek >= 35) {
-    echo '<br><h2 class="blue-text">Możesz głosować, kandydować do Sejmu i Senatu oraz na Prezydenta</h2>';
+    echo '<h2 class="blue-text">Możesz głosować, kandydować do Sejmu i Senatu oraz na Prezydenta</h2>';
 }
 ?>
 </body>

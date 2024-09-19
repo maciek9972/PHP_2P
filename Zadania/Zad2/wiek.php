@@ -8,10 +8,10 @@
         h1 {
             border: 2px solid black;
         }
-        .php-code {
+        .brown-color {
             color: brown;
         }
-        .blue-text {
+        .navy {
             color: navy;
             border: 2px dotted navy;
         }
@@ -20,7 +20,7 @@
 <body>
 <?php
 $wiek = random_int(1, 100);
-echo '<span class="php-code">';
+echo '<span class="brown-color">';
 echo "<h1> Mam " . $wiek;
 if ($wiek == 1) {
     echo " rok.</h1>";
@@ -30,17 +30,17 @@ if ($wiek > 1) {
 }
 echo '</span>';
 if ($wiek == 1) {
-    echo '<h2 class="blue-text">Jeszcze nie możesz głosować</h2>';
+    echo '<h2 class="navy">Jeszcze nie możesz głosować</h2>';
 } else if ($wiek > 1 && $wiek < 18) {
-    echo '<h2 class="blue-text">Jeszcze nie możesz głosować</h2>';
+    echo '<h2 class="navy">Jeszcze nie możesz głosować</h2>';
 } else if ($wiek >= 18 && $wiek < 21) {
-    echo '<h2 class="blue-text">Możesz tylko głosować</h2>';
+    echo '<h2 class="navy">Możesz tylko głosować</h2>';
 } else if ($wiek >= 21 && $wiek < 30) {
-    echo '<h2 class="blue-text">Możesz głosować i kandydować do Sejmu</h2>';
+    echo '<h2 class="navy">Możesz głosować i kandydować do Sejmu</h2>';
 } else if ($wiek >= 30 && $wiek < 35) {
-    echo '<h2 class="blue-text">Możesz głosować i kandydować do Sejmu i Senatu</h2>';
+    echo '<h2 class="navy">Możesz głosować i kandydować do Sejmu i Senatu</h2>';
 } else if ($wiek >= 35) {
-    echo '<h2 class="blue-text">Możesz głosować, kandydować do Sejmu i Senatu oraz na Prezydenta</h2>';
+    echo '<h2 class="navy">Możesz głosować, kandydować do Sejmu i Senatu oraz na Prezydenta</h2>';
 }
 ?>
 </body>

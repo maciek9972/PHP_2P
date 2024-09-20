@@ -20,7 +20,7 @@
 <body>
 <?php
 $wiek = random_int(1, 100);
-echo '<span class="brown-color">';
+echo '<class="brown-color">';
 echo "<h1> Mam " . $wiek;
 if ($wiek == 1) {
     echo " rok.</h1>";
@@ -28,7 +28,7 @@ if ($wiek == 1) {
 if ($wiek > 1) {
     echo " lat.</h1>";
 }
-echo '</span>';
+echo '';
 if ($wiek == 1) {
     echo '<h2 class="navy">Jeszcze nie możesz głosować</h2>';
 } else if ($wiek > 1 && $wiek < 18) {

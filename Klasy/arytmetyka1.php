@@ -1,6 +1,6 @@
 <?php
 
-class Arytmetyka {
+class Arytmetyka1 {
     public $liczbaA;
     public $liczbaB;
 

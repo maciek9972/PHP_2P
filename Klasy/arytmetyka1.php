@@ -45,7 +45,7 @@ class Arytmetyka1 {
 </head>
 <body>
 <?php
-$obj = new Arytmetyka();
+$obj = new Arytmetyka1();
 $obj->liczbaA = -125;
 $obj->liczbaB = 0;
 ?>

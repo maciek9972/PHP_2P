@@ -10,37 +10,17 @@ include_once 'MasaGestosc.php';
 </head>
 <body>
 <?php
-        $r=5;
-        $s="gips";
-        $s1="rtęć";
-        $s2="złoto";
-        $s3="woda";
-                
-        $DodawanieObj = new obliczenia($r,$s);
+    $r = 5;
+    $materials = ["gips", "rtęć", "złoto", "woda"];
 ?>
 
 <ol type="I">
-    <li>
-        Masa kulki <strong>gipsu</strong> o promieniu <u><?=$r?>cm</u>: <mark><?=$DodawanieObj->masa()?> kg</mark>
-    </li>
-    <li>
-        <?php
-        $DodawanieObj = new obliczenia($r,$s1);
-        ?>
-        Masa kulki <strong>rtęci</strong> o promieniu <u><?=$r?>cm</u>: <mark><?=$DodawanieObj->masa()?> kg</mark>
-    </li>
-    <li>
-        <?php
-        $DodawanieObj = new obliczenia($r,$s2);
-        ?>
-        Masa kulki <strong>złota</strong> o promieniu <u><?=$r?>cm</u>: <mark><?=$DodawanieObj->masa()?> kg</mark>
-    </li>
-    <li>
-        <?php
-        $DodawanieObj = new obliczenia($r,$s3);
-        ?>
-        Masa kulki <strong>wody</strong> o promieniu <u><?=$r?>cm</u>: <mark><?=$DodawanieObj->masa()?> kg</mark>
-    </li>
+    <?php foreach ($materials as $material): ?>
+        <?php $DodawanieObj = new obliczenia($r, $material); ?>
+        <li>
+            Masa kulki <strong><?= $material ?></strong> o promieniu <u><?= $r ?>cm</u>: <mark><?= $DodawanieObj->masa() ?> kg</mark>
+        </li>
+    <?php endforeach; ?>
 </ol>
 
 </body>

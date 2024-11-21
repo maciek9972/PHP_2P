@@ -18,7 +18,7 @@ include_once('okrag_sfera_kula.php');
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #8ecae6;
+            background-color: #8ecae6; 
             table-layout: fixed;
         }
         th, td {

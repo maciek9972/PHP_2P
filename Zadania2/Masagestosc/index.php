@@ -11,7 +11,7 @@ include_once 'MasaGestosc.php';
 <body>
 <?php
     $r = 5;
-    $materials = ["gips", "rtęć", "złoto", "woda"];
+    $materials = ["gipsu", "rtęci", "złota", "wody"];
 ?>
 
 <ol type="I">

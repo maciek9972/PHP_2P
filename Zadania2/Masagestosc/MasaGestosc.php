@@ -21,16 +21,16 @@
         public function masa(){
             $objetosc=$this->objetosc();
             switch($this->substancja){
-                case 'gips':
+                case 'gipsu':
                     $masa=(2350 * $objetosc)/1000000;
                     return number_format($masa,3,","," ");
-                case 'rtęć':
+                case 'rtęci':
                     $masa=(13534 * $objetosc)/1000000;
                     return number_format($masa,3,","," ");
-                case 'złoto':
+                case 'złota':
                     $masa=(19280 * $objetosc)/1000000;
                     return number_format($masa,3,","," ");
-                case 'woda':
+                case 'wody':
                     $masa=(997 * $objetosc)/1000000;
                     return number_format($masa,3,","," ");
             }

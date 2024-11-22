@@ -11,12 +11,12 @@ include_once 'MasaGestosc.php';
 <body>
 <?php
     $r = 5;
-    $materials = ["gipsu", "rtęci", "złota", "wody"];
+    $substancje = ["gipsu", "rtęci", "złota", "wody"];
 ?>
 
 <ol type="I">
-    <?php foreach ($materials as $material): ?>
-        <?php $DodawanieObj = new obliczenia($r, $material); ?>
+    <?php foreach ($substancje as $sub): ?>
+        <?php $DodawanieObj = new obliczenia($r, $sub); ?>
         <li>
             Masa kulki <strong><?= $material ?></strong> o promieniu <u><?= $r ?>cm</u>: <mark><?= $DodawanieObj->masa() ?> kg</mark>
         </li>

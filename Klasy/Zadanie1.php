@@ -21,8 +21,8 @@ class Modulo {
 <body>
 <?php
 $resz = new Modulo();
-$resz->liczbaA = 22;
-$resz->liczbaB = 5;
+$resz->liczbaA = 23;
+$resz->liczbaB = 3;
 ?>    
 <p>Reszta z dzielenia <?= $resz->liczbaA ?> i <?= $resz->liczbaB ?> wynosi <?= $resz->reszta() ?></p>
 </body>

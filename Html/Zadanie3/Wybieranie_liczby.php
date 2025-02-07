@@ -10,8 +10,8 @@
         fieldset{
             border-width: 2px;
             border-color: blue;
-            margin-left: 600px;
-            margin-right: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         label{
             margin-right: 15px;
@@ -36,7 +36,7 @@
             }
             ?>
             <br>
-            <input type="submit" name="wyslij" value="Wyślij to">
+            <input type="submit" name="wyslij" value="Wyślij">
         </form>
         <?php
         if (!empty($_POST["litera"])) {

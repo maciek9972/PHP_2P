@@ -14,7 +14,7 @@
 <body>
     <fieldset><legend>lorem50</legend>
     <?php if($_SERVER['REQUEST_METHOD']==="POST"){
-    ?><p>Oto wpisany tekst:</p>
+    ?><p>Oto wpisany tekst: </p>
     <p><i><?= $_POST["text"] ?></i></p>
    <?php }
     else{

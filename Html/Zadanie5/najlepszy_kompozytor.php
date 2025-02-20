@@ -19,7 +19,7 @@
 <body>
     <fieldset><legend>Najlepszy kompozytor</legend>
     <?php if($_SERVER['REQUEST_METHOD']==="POST"){
-    ?><p>Według ciebie najlepszym kompozytorem jest:
+    ?><p>Według ciebie najlepszym kompozytorem jest :
     <?= $_POST["komp"] ?></p>
    <?php }
     else{

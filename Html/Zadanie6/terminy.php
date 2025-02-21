@@ -1,7 +1,3 @@
-niger 
-Zdjęcie kontaktu
-Od p23plechw@zsi.kielce.pl w dniu 2025-02-21 13:19
-Szczegóły Zwykły tekst
 <!DOCTYPE html>
 <html lang="pl">
 <head>

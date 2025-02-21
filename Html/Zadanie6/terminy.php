@@ -1,50 +1,88 @@
+niger 
+Zdjęcie kontaktu
+Od p23plechw@zsi.kielce.pl w dniu 2025-02-21 13:19
+Szczegóły Zwykły tekst
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
     <style>
-        body{
-            background-color: #fff7d1;
-            padding: 100px;
-        }
-        table{
-            background-color: #ffecc8;
-            border-collapse: collapse;
-        }
-        td{
-            border: solid grey;
-            padding: 10px;
-            text-align: center;
-            vertical-align: middle;
-        }
-        input{
-            background-color: #ffd09b;
-            border-color: #ffb0b0 ;
-        }
-        input[type=checkbox]{   
-            accent-color: #ffd09b;
-            outline-color: #ffb0b0;
-            outline-offset: -1px;
-        }
-    </style>
-</head>
+        html {
+    font-family: "Pixelify Sans", serif;
+}
+body {
+    background-color: #fff7d1;
+    padding: 100px;
+}
+table {
+    background-color: #ffecc8;
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid grey;
+    padding: 10px;
+}
+input {
+    background-color: #ffd09b;
+    border-color: #ffb0b0;
+}
+input[type=checkbox] {
+    accent-color: #ffd09b;
+    outline: #ffb0b0 solid 1px;
+    outline-offset: -1px;
+    transform: scale(2);
+}
+</style>
 <body>
+    <p>Terminarz</p>
     <table>
-    <form>
-    <td colspan="3">Terminy</td>
-    <?php for($i=0;$i<5;$i++){ ?>
-        <tr>
-            <td><label for="box<?=$i+1?>">Termin <?=$i+1?></label></td>
-            <td><input type="checkbox" name="box" id="box<?=$i+1?>"></td>
-            <td><input type="month" name="date"></td>
+        <form method="post">
+            <?php
+            $saveFile = false;
+            for($i = 1; $i <= 5; $i++) {
+                $warunek = in_array("termin1".$i, ($_POST["terminy"] ?? [])) && !empty($_POST["termin1-month".$i]);
+                $saveFile = $saveFile || $warunek ? true : false;
+                $checked = $warunek ? "checked" : "";
+                ?>
+                <tr>
+                <td>
+                        <label for="termin1<?= $i ?>">Termin <?= $i ?>.</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="terminy[]" id="termin1<?= $i ?>" value="termin1<?= $i ?>" <?= $checked ?>>
+                    </td>
+                    <td>
+                    <input type="month" name="termin1-month<?= $i ?>" id="termin1-month<?= $i ?>" value="<?= $warunek ? $_POST["termin1-month".$i] : '' ?>">
+                </td>
+                </tr>
+                <?php
+            }
+            ?>
+            <tr>
+                <td colspan="3" style="text-align: center;">
+            <input type="submit" value="Zapisz">
+        </td>
         </tr>
-    <?php } ?>
-        <tr>
-            <td colspan="3"><input type="submit" value="Zapisz" name="Zapisz"></td>
-        </tr>
-    </form>
+        </form>
     </table>
+    <?php
+
+        if($saveFile) {
+
+            $fileName = "terminy.txt";
+            $fileHandle = fopen($fileName, "a");
+            $data = date("Y-m-d H:i:s")."\n".print_r($_POST, true);
+            fwrite($fileHandle, $data);
+            fclose($fileHandle);
+            ?>
+
+
+            <p> Dane zostały zapisane do pliku <?= $fileName ?>. </p>
+
+            <?php } ?>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -5,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terminy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aubrey&family=Macondo&family=Modern+Antiqua&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap" rel="stylesheet">
     <style>
         html {
-    font-family: "Pixelify Sans", serif;
+    font-family: "Modern Antiqua", serif;
 }
 body {
     background-color: #fff7d1;
@@ -69,5 +70,6 @@ input[type=checkbox] {
      ?>
             <p> Dane zostały zapisane do pliku <?= $fileName ?>. </p>
      <?php } ?>
+     <pre> <?=print_r($_POST);?></pre>
 </body>
 </html>

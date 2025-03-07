@@ -1,10 +1,10 @@
 <style>
     div{
-        position: sticky;
-        top:0%;
-        background-color: #8E1DE2;
-        height: 60px;
-        width: 100%;
+    position: sticky;
+    top:0%;
+    background-color: #8E1DE2;
+    height: 60px;
+    width: 100%;
     }
     a.main{
     position: relative;
@@ -38,7 +38,7 @@
     padding: 10px;
     padding-inline: 40px;
     border-radius: 30px;
-    background-color: #2C1DE2;
+    background-color: #E28E1D;
     font-family: Courier New;
     text-align: center;
     }

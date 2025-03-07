@@ -1,7 +1,7 @@
 <style>
     footer{
         font-family: Papyrus;
-        background-color: #333;
+        background-color: #8E1DE2;
         color: white;
         text-align: center;
         padding: 16px 0;

@@ -64,6 +64,7 @@ input[type=checkbox] {
         if($saveFile) {
             $fileName = "terminy.txt";
             $fileHandle = fopen($fileName, "a");
+            $json = json_encode($_POST);
             $data = date("Y-m-d H:i:s")."\n".print_r($_POST, true);
             fwrite($fileHandle, $data);
             fclose($fileHandle);

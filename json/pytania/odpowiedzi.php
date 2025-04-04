@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Odpowiedź</title>
 </head>
 <body>
     <?php
         if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['user_answer'])){
     ?>
+    <div class="container">
         <div class="text">
         <h1>Odpowiedź</h1>
         <p>Trudność: <?=$_SESSION['difficulty']?></p>
         <p>Kategoria <?= $_SESSION['category']?></p>
         <p>Pytanie: <?=$_SESSION['question']?></p>
         <p>Wybrałeś: <?=$_POST['user_answer']?></p>
+        
         <p>
             <?php 
             if($_POST['user_answer'] == $_SESSION['correct_answer']){
@@ -31,6 +34,7 @@
     <?php
         }
     ?>
-
+        </div>
+    </div>
 </body>
 </html>

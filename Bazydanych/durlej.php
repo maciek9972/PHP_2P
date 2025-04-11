@@ -11,12 +11,14 @@ $servername = "localhost";
 $username = "durlej";
 $password = "korale1313";
 $db = "durlej";
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $db);
 
-// Check connection
-catch(mysql_sql)
-echo "Połączono ";
+try{
+    $conn = mysqli_connect($servername, $username, $password, $db);
+    ?> <p>Połączono</p><?php
+}
+catch(mysqli_sql_exception){
+    ?><p>Wystąpił błąd</p><?php
+}
 ?>
 </body>
 </html>

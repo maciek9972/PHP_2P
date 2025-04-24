@@ -24,7 +24,9 @@ $wynik = $conn->query($Ksiazka);
 
 if ($wynik->num_rows > 0) {
     while ($wier = $wynik->fetch_assoc()) {
-        echo "<br> Książka ". $wier["Tytul"]. " - Name: ". $wier["Imie"]. " " . $wier["Nazwisko"] . "<br>";
+        ?>
+        <p>Książka <i>"<?=$wier['Tytul']?>"</i> została napisana przez <strong><?=$wier['Imie']?> <?=$wier['Nazwisko']?></strong></p>
+       <?php    
     }
 } else {
     echo "0 wyników";

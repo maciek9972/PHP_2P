@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+div{
+    float: left;
+    padding: 10px;
+    height: 70%;
+}
+.b1{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: DodgerBlue;
+
+}
+.b2{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    background-color: gold;
+}
+a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+a:hover{
+    background-color: rgba(0, 255, 255, 0.479);
+}
+
+

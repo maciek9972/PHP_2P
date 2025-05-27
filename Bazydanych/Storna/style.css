@@ -10,14 +10,14 @@ div{
     width: 25%;
     display: flex;
     flex-direction: column;
-    background-color: DodgerBlue;
+    background-color: rgb(74, 125, 175);
 
 }
 .b2{
     width: 75%;
     display: flex;
     flex-direction: column;
-    background-color: gold;
+    background-color: rgb(201, 188, 118);
 }
 a{
     display: block;
@@ -30,4 +30,8 @@ a:hover{
     background-color: rgba(0, 255, 255, 0.479);
 }
 
+table,td ,th{
+            border-collapse:collapse;
+            border: 1px, solid, black
+        }
 

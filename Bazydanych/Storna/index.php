@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <?php include("db/connect.php");?>
     <div class="b1">
-        <h2><a href="index.php?pages=glowna.php">Strona główna</a></h2>
-        <h2><a href="index.php?pages=czytelnicy.php">Tabele czytelnicy</a></h2>
-        <h2><a href="#">Tabele książki</a></h2>
-        <h2><a href="#">Tabele pracownicy</a></h2>
-        <h2><a href="#">Tabele stanowiska</a></h2>
+        <h2><a href="index.php?page=glowna">Strona główna</a></h2>
+        <h2><a href="index.php?page=czytelnicy">Tabela czytelnicy</a></h2>
+        <h2><a href="index.php?page=dzialy">Tabela działy</a></h2>
+        <h2><a href="index.php?page=ksiazki">Tabela książki</a></h2>
+        <h2><a href="index.php?page=pracownicy">Tabela pracownicy</a></h2>
+        <h2><a href="index.php?page=stanowiska">Tabela stanowiska</a></h2>
+        <h2><a href="index.php?page=wypozyczenia">Tabela wypożyczenia</a></h2>
     </div>
     <div class="b2">
     <?php
@@ -27,4 +30,6 @@
         }
     ?>
     </div>
+    <?php include("db/disconnect.php")?>
+</body>
 </html>

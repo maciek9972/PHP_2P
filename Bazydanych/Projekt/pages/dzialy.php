@@ -1,7 +1,9 @@
-<h1>Tabela działy</h1>
+<h1>Tabela Działy</h1>
 <?php 
 $query = "SELECT * FROM dzialy; ";
 $wynik = mysqli_query($conn, $query);
+$licz=mysqli_num_rows($wynik);
+echo $licz;
 ?>
 <table>
     <tr>

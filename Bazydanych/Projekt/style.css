@@ -7,21 +7,22 @@ div{
     height: 70%;
 }
 .b1{
-    width: 25%;
+    width: 20%;
     display: flex;
     flex-direction: column;
     background-color: rgb(74, 125, 175);
 
 }
 .b2{
-    width: 75%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     background-color: rgb(201, 188, 118);
 }
 a{
     display: block;
-    padding: 15px;
+    padding: 10px;
+    margin: -13px;
     text-decoration: none;
     color: blanchedalmond;
 }
